@@ -1,28 +1,33 @@
-# Mini Projet 1 - Creation d'un Portfolio Web (HTML + CSS)
+# Mini Projet 1 - Portfolio Web (HTML + CSS)
 
-Portfolio personnel statique realise en `HTML5` et `CSS3`.
-Le site presente le profil de **Hicham Ouaouche** dans les domaines **Cybersecurity** et **Artificial Intelligence**.
+## 1. Presentation du projet
 
-## Apercu
+Ce mini-projet consiste a realiser un portfolio web personnel statique en `HTML5` et `CSS3`.
+Le site met en avant le profil de **Hicham Ouaouche**, etudiant en **Cybersecurity** et **Artificial Intelligence**.
 
-Ce mini-projet contient une page unique avec:
-- une section hero de presentation
-- une section About
-- une section Skills
-- une section Projects
-- une section Education (timeline)
-- une section Languages
-- une section Contact
-- un formulaire de contact simple (`mailto:`)
+Objectif principal:
+- presenter clairement le profil academique et professionnel
+- valoriser les competences techniques
+- afficher des projets realises
+- faciliter la prise de contact
 
-## Technologies utilisees
+## 2. Objectifs pedagogiques
+
+Dans le cadre du module Technologie Web, ce projet permet de pratiquer:
+- la structuration semantique d'une page HTML
+- la mise en forme avancee en CSS
+- l'utilisation de `Flexbox` et `Grid`
+- la creation d'une navigation interne avec ancres (`#about`, `#skills`, etc.)
+- l'organisation d'un mini-projet front-end simple et lisible
+
+## 3. Technologies utilisees
 
 - `HTML5`
 - `CSS3`
 - `Google Fonts` (Syne, DM Sans)
 - `Font Awesome` (icones)
 
-## Structure du projet
+## 4. Structure du projet
 
 ```text
 .
@@ -31,37 +36,83 @@ Ce mini-projet contient une page unique avec:
 |- hicham.jpeg
 |- README.md
 `- screenshots/
+	|- Hiou.png
+	|- About.png
+	|- Skills.png
+	|- Project.png
+	|- Education.png
+	|- Contact.png
+	`- Contacte_me.png
 ```
 
-## Lancer le projet
+## 5. Description fonctionnelle du site
 
-1. Ouvrir le dossier dans VS Code.
-2. Ouvrir `index.html` dans un navigateur (double clic ou Live Server).
+Le portfolio est construit en page unique (single page) avec les sections suivantes:
 
-Aucune installation de dependances n'est necessaire.
+1. `Hero`
+	presentation rapide du nom, du domaine et d'un visuel principal.
 
-## Screenshots du site web
+2. `About`
+	resume du parcours, des objectifs et du positionnement professionnel.
 
-> J'ai prepare les emplacements pour les captures d'ecran.
-> Ajoute simplement tes images dans le dossier `screenshots/` avec les noms ci-dessous.
+3. `Skills`
+	competences techniques organisees par categories:
+	securite, programmation, systemes/reseaux, IA & big data.
 
-### 1) Hero / Page d'accueil
+4. `Projects`
+	liste de projets recents avec technologies associees.
 
-![Hero](screenshots/hero.png)
+5. `Education`
+	parcours academique affiche en timeline.
 
-### 2) A propos et competences
+6. `Languages`
+	langues maitrisees (Arabic, French, English).
 
-![About and Skills](screenshots/about-skills.png)
+7. `Contact`
+	informations de contact directes (email, telephone, GitHub, LinkedIn).
 
-### 3) Projets
+8. `Contact form panel`
+	mini formulaire avec ouverture du client mail via `mailto:`.
 
-![Projects](screenshots/projects.png)
+## 6. Choix de conception UI/UX
 
-### 4) Education et contact
+- Theme clair moderne avec palette bleue
+- Navigation fixe en haut pour acces rapide aux sections
+- Mise en page responsive (desktop/mobile)
+- Utilisation d'icones pour ameliorer la lisibilite
+- Hierarchie visuelle claire (titres, badges, cartes, timeline)
 
-![Education and Contact](screenshots/education-contact.png)
+## 7. Captures d'ecran
 
-## Informations de contact affichees
+### Accueil (Hero)
+![Accueil](screenshots/Hiou.png)
+
+### A propos
+![About](screenshots/About.png)
+
+### Competences
+![Skills](screenshots/Skills.png)
+
+### Projets
+![Projects](screenshots/Project.png)
+
+### Education
+![Education](screenshots/Education.png)
+
+### Contact
+![Contact](screenshots/Contact.png)
+
+### Formulaire Contact Me
+![Contact form](screenshots/Contacte_me.png)
+
+## 8. Execution du projet
+
+1. Ouvrir le dossier du projet dans VS Code.
+2. Ouvrir `index.html` dans un navigateur.
+
+Aucune dependance externe n'est a installer.
+
+## 9. Informations de contact affichees
 
 - Email: `hichamouauche@gmail.com`
 - Telephone: `+212 613 669 517`
@@ -69,7 +120,18 @@ Aucune installation de dependances n'est necessaire.
 - LinkedIn: `https://linkedin.com/in/hichamouaouche-64847832b`
 - Localisation: `Beni Mellal, Morocco`
 
-## Notes
+## 10. Limites actuelles et ameliorations possibles
 
-- Le formulaire de contact utilise `mailto:` (ouverture du client mail local).
-- Pour un envoi reel via formulaire web, il faudra connecter un backend (PHP, Node.js, etc.).
+Limites:
+- site statique (pas de backend)
+- formulaire base sur `mailto:` (depend du client mail local)
+
+Ameliorations possibles:
+- connecter le formulaire a un backend (`PHP`/`Node.js`)
+- ajouter une section Certifications
+- ajouter des liens live/demo pour les projets
+- optimiser davantage l'accessibilite (labels ARIA supplementaires, contrastes)
+
+## 11. Conclusion
+
+Ce mini-projet repond a l'objectif de creation d'un portfolio web personnel, avec une interface moderne, une structure claire, et une bonne base technique en HTML/CSS pour evoluer vers une version dynamique a l'avenir.
