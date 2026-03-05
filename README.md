@@ -118,7 +118,7 @@ Aucune dependance externe n'est a installer.
 - Telephone: `+212 613 669 517`
 - GitHub: `https://github.com/hichamouaouche`
 - LinkedIn: `https://linkedin.com/in/hichamouaouche-64847832b`
-- Localisation: `Beni Mellal, Morocco`
+- Localisation: `Mohammedia, Casablanca`
 
 ## 10. Limites actuelles et ameliorations possibles
 
