@@ -1,0 +1,472 @@
+
+<!--
+  Fichier principal HTML du portfolio de Hicham Ouaouche
+  Structure : navigation, sections (about, skills, projects, education, contact), formulaire de contact, footer
+  Utilise CSS externe (style.css), polices Google Fonts, Font Awesome, et script.js
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Hicham Ouaouche — Cybersecurity & AI Engineer. Portfolio showcasing projects, skills, and contact info."/>
+  <title>Hicham Ouaouche — Portfolio</title>
+  <!-- Reading progress bar -->
+  <div id="progress-bar"></div>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div id="progress-bar"></div>
+
+  <!--
+    NAVIGATION PRINCIPALE
+    - Menu fixe, liens d'ancrage, hamburger mobile, bouton CTA
+  -->
+  <nav class="nav">
+    <a href="#" class="nav-logo" aria-label="Back to top">HIOU</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact-form" class="nav-cta">Contact Me</a>
+    <!-- Hamburger button (mobile) -->
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!--
+    FORMULAIRE DE CONTACT (popup CSS :target)
+    - S'ouvre via #contact-form, champs requis : nom, email, message
+  -->
+  <section class="contact-form-panel" id="contact-form">
+    <div class="contact-form-box">
+      <h2>Send me a message</h2>
+      <p>Fill in your details and message below.</p>
+
+      <form action="mailto:hichamouauche@gmail.com" method="post" enctype="text/plain" class="contact-form-simple">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="Full Name" placeholder="Your full name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="Phone" placeholder="+212 6XX XXX XXX" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" rows="5" placeholder="What would you like to discuss?" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Send</button>
+          <a href="#" class="btn-ghost"><i class="fa-solid fa-xmark"></i> Close</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!--
+    SECTION HERO
+    - Présentation, photo, stats, boutons d'action
+  -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to Opportunities
+      </div>
+      <h1 class="hero-name">
+        <span>Hicham</span>
+        <span class="name-accent">Ouaouche</span>
+      </h1>
+      <p class="hero-title">
+        <span id="typed-text">Cybersecurity Expert</span><span id="typed-cursor"></span>
+      </p>
+      <p class="hero-sub">
+        SDIA Master's — ENSET Mohammedia<br/>
+        Securing the digital future through intelligent innovation.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">See my projects <i class="fa-solid fa-arrow-down"></i></a>
+        <a href="#contact" class="btn-ghost">Contact</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Diplomas Earned</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Internships Completed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <div class="photo-glow"></div>
+        <div class="photo-placeholder">
+          <img src="hicham.jpeg" alt="Photo of Hicham Ouaouche" class="profile-photo" />
+        </div>
+        <div class="photo-ring ring-1"></div>
+        <div class="photo-ring ring-2"></div>
+        <div class="floating-chip chip-1"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="floating-chip chip-2"><i class="fa-solid fa-shield-halved"></i> Kali Linux</div>
+        <div class="floating-chip chip-3"><i class="fa-solid fa-brain"></i> AI / ML</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--
+    SECTION ABOUT
+  -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal">About</div>
+      <h2 class="section-title reveal">Professional <span class="accent">Profile</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>Master's student in Distributed Systems and Artificial Intelligence at ENSET Mohammedia, specializing in the convergence of digital security and advanced AI.</p>
+          <p>With a degree in Cybersecurity from ESTBM, I have developed hands-on expertise in security auditing, penetration testing, and system hardening using tools like Kali Linux, Wireshark, and Metasploit.</p>
+          <p>My goal: to design intelligent systems capable of detecting and preventing cyber threats in real time.</p>
+        </div>
+        <div class="about-cards">
+          <div class="about-card reveal">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h3>Cybersecurity</h3>
+              <p>Auditing, pentesting, vulnerability analysis, and system hardening.</p>
+            </div>
+          </div>
+          <div class="about-card reveal">
+            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+            <div>
+              <h3>Artificial Intelligence</h3>
+              <p>Machine learning applied to fraud and anomaly detection.</p>
+            </div>
+          </div>
+          <div class="about-card reveal">
+            <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div>
+              <h3>Networks</h3>
+              <p>Network administration, distributed systems, and infrastructure security.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--
+    SECTION SKILLS
+  -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label reveal">Skills</div>
+      <h2 class="section-title reveal">Technical <span class="accent">Stack</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <h3 class="cat-title"><i class="fa-solid fa-shield-halved"></i> Security</h3>
+          <div class="skill-tags">
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">Metasploit</span>
+            <span class="tag">Vulnerability Analysis</span>
+            <span class="tag">Firewall</span>
+            <span class="tag">Security Audit</span>
+            <span class="tag">Pentest</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="cat-title"><i class="fa-solid fa-code"></i> Programming</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">Bash</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">PHP</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">WordPress</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="cat-title"><i class="fa-solid fa-server"></i> Systems &amp; Networks</h3>
+          <div class="skill-tags">
+            <span class="tag">Ubuntu</span>
+            <span class="tag">Windows Server</span>
+            <span class="tag">Network Administration</span>
+            <span class="tag">Distributed Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="cat-title"><i class="fa-solid fa-brain"></i> AI &amp; Big Data</h3>
+          <div class="skill-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Anomaly Detection</span>
+            <span class="tag">Big Data</span>
+            <span class="tag">Applied Mathematics</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--
+    SECTION PROJECTS
+  -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">Projects</div>
+      <h2 class="section-title reveal">Recent <span class="accent">Work</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal">
+          <div class="project-number">01</div>
+          <div class="project-tags-row">
+            <span>Python</span><span>Machine Learning</span><span>Real-time</span>
+          </div>
+          <h3>Bank Fraud Detection with AI</h3>
+          <p>Real-time detection system using machine learning to identify banking fraud and financial anomalies. Achieves high accuracy with minimal false positives.</p>
+          <div class="project-footer">
+            <span class="project-type"><i class="fa-solid fa-brain"></i> AI / Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-tags-row">
+            <span>Kali Linux</span><span>Metasploit</span>
+          </div>
+          <h3>System Security Audit</h3>
+          <p>In-depth analysis and strengthening of a complete system's security. Penetration testing and vulnerability reporting.</p>
+          <div class="project-footer">
+            <span class="project-type"><i class="fa-solid fa-shield-halved"></i> Security</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-tags-row">
+            <span>Java</span><span>Application</span>
+          </div>
+          <h3>Heab Task Manager</h3>
+          <p>Task management platform to optimize personal and professional productivity and organization.</p>
+          <div class="project-footer">
+            <span class="project-type"><i class="fa-solid fa-list-check"></i> Productivity</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">04</div>
+          <div class="project-tags-row">
+            <span>PHP</span><span>HTML/CSS</span>
+          </div>
+          <h3>Student Absence Management</h3>
+          <p>Web application for tracking student attendance with dashboard and automated reports.</p>
+          <div class="project-footer">
+            <span class="project-type"><i class="fa-solid fa-globe"></i> Web App</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-number">05</div>
+          <div class="project-tags-row">
+            <span>PHP</span><span>HTML/CSS</span>
+          </div>
+          <h3>IT Equipment Management</h3>
+          <p>Website for tracking computer equipment with inventory, assignments, and maintenance history.</p>
+          <div class="project-footer">
+            <span class="project-type"><i class="fa-solid fa-globe"></i> Web App</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--
+    SECTION EDUCATION
+  -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-label reveal">Journey</div>
+      <h2 class="section-title reveal">Academic <span class="accent">Education</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item active">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">Ongoing</span>
+            <h3>Master SDIA</h3>
+            <p class="timeline-school">ENSET Mohammedia</p>
+            <p>Distributed Systems and Artificial Intelligence — 1st year</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">2025</span>
+            <h3>Cybersecurity Bachelor's</h3>
+            <p class="timeline-school">École Supérieure de Technologie, Mohammedia (ESTBM)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">2025</span>
+            <h3>AI Technical Diploma</h3>
+            <p class="timeline-school">BTSBM, Mohammedia (Independent Candidate)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">2024</span>
+            <h3>IT Systems &amp; Networks Diploma</h3>
+            <p class="timeline-school">BTSBM, Mohammedia</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <span class="timeline-year">2022</span>
+            <h3>High School Diploma — Physical Sciences</h3>
+            <p class="timeline-school">Lycée Zerktouni, Mohammedia</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--
+    SECTION LANGUAGES
+  -->
+  <section class="languages-section">
+    <div class="container">
+      <div class="lang-bar">
+        <div class="lang-item reveal">
+          <span class="lang-flag">🇲🇦</span>
+          <span class="lang-name">Arabic</span>
+          <span class="lang-level native">Native</span>
+        </div>
+        <div class="lang-item reveal">
+          <span class="lang-flag">🇫🇷</span>
+          <span class="lang-name">French</span>
+          <span class="lang-level fluent">Fluent</span>
+        </div>
+        <div class="lang-item reveal">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-name">English</span>
+          <span class="lang-level fluent">Fluent</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--
+    SECTION CONTACT
+  -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">Contact</div>
+      <h2 class="section-title reveal">Let's Work <span class="accent">Together</span></h2>
+      <p class="contact-sub reveal">I am available for internships, projects, and professional opportunities.</p>
+      <div class="contact-grid">
+        <a href="mailto:hichamouauche@gmail.com" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">hichamouauche@gmail.com</p>
+          </div>
+        </a>
+        <a href="tel:+212613669517" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <p class="contact-label">Phone</p>
+            <p class="contact-value">+212 613 669 517</p>
+          </div>
+        </a>
+        <a href="https://github.com/hichamouaouche" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <div>
+            <p class="contact-label">GitHub</p>
+            <p class="contact-value">hichamouaouche</p>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/hichamouaouche-64847832b" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div>
+            <p class="contact-label">LinkedIn</p>
+            <p class="contact-value">hichamouaouche</p>
+          </div>
+        </a>
+      </div>
+      <p class="contact-location reveal">
+        <i class="fa-solid fa-location-dot"></i> Mohammedia, Casablanca — Morocco
+      </p>
+    </div>
+  </section>
+
+
+  <!--
+    FOOTER
+  -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 <span class="footer-accent">Hicham Ouaouche</span> — All rights reserved</p>
+      <p class="footer-sub">Cybersecurity &amp; Artificial Intelligence</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scroll-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Toast notification -->
+  <div id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
