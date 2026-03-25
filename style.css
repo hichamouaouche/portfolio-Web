@@ -497,7 +497,7 @@ img { max-width: 100%; display: block; }
 /* Hero name */
 .hero-name {
   font-family: var(--font-head);
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2rem, 4.5vw, 4.5rem);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -2px;
@@ -505,7 +505,7 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   margin-bottom: 1.5rem;
   color: var(--text);
-  word-break: break-word;
+  white-space: nowrap;
 }
 
 .name-accent {
@@ -699,15 +699,15 @@ img { max-width: 100%; display: block; }
 }
 
 .chip-1 {
-  top: 8%; right: -5%;
+  top: 8%; right: 0%;
   animation: chipFloat 4s ease-in-out infinite;
 }
 .chip-2 {
-  bottom: 18%; right: -5%;
+  bottom: 18%; right: 4%;
   animation: chipFloat 4s 1.5s ease-in-out infinite;
 }
 .chip-3 {
-  top: 52%; left: -10%;
+  top: 52%; left: -4%;
   animation: chipFloat 4s 3s ease-in-out infinite;
 }
 
